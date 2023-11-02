@@ -2,6 +2,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
     .then(res => res.json())
     .then(data => {
         console.log(data)
+
     })
     .catch(err => {
         alert(`error ${err}`)
@@ -21,6 +22,14 @@ function getDrink(){
     .then(rec => res.json())
     .then(data => {
         console.log(data)
+        document.querySelector("img").src = data.drinks[0].strImageSource
+/* THE STUFF BELOW IS TRYING TO GET ALL THE INGREDIENTS FROM THE API ARRAY TO PUT THEM IN ORDER */   
+        data.drinks[0].forEach((x,i) => {
+            if(includes('strIngredient')){
+                true
+            }
+        })
+        // document.querySelector(".ingredients")
     })
     .catch(err => {
         alert(`error ${err}`)
