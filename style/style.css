@@ -1,3 +1,37 @@
+* {
+    text-align: center;
+}
+
+header{
+    border: 1px solid red;
+    display: flex;
+    margin: 0; /*Doesn't do anything */
+    width: 100%; /*Doesn't do anything */
+    justify-content: space-around;
+
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+input {
+    width: 50%;
+    height: 20px;
+    font-size: 20px;
+}
+
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+button {
+
+}
+
 img {
     length: 150px;
     width: 150px;
