@@ -53,6 +53,13 @@ function getDrink(){
     .then(res => res.json())
     .then(data => {
         console.log(data)
+
+/*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
+        data.drinks.forEach((x,i) =>{
+            let ul = document.querySelector('ul')
+            let li = document.createElement('li')
+            ul.appendChild(li).innerText = x.strDrink
+        })
         document.querySelector("img").src = data.drinks[0].strDrinkThumb
         document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
 /****************** THE STUFF BELOW IS TRYING TO GET ALL THE INGREDIENTS FROM THE API ARRAY TO PUT THEM IN ORDER********************** */   
