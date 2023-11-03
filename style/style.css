@@ -7,8 +7,14 @@ header{
     display: flex;
     margin: 0; /*Doesn't do anything */
     width: 100%; /*Doesn't do anything */
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    position: fixed;
+}
 
+.hugoRekt {
+    justify-self: first baseline;
+    margin-left: 0;
+    margin-right: 20%;
 }
 
 h2 {
@@ -19,6 +25,7 @@ input {
     width: 50%;
     height: 20px;
     font-size: 20px;
+    margin-top: 100px;
 }
 
 
