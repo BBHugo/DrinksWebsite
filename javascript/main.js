@@ -56,12 +56,18 @@ function getDrink(){
 
 /*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
         data.drinks.forEach((x,i) =>{
+            let a = document.createElement('a')
             let ul = document.querySelector('ul')
             let li = document.createElement('li')
-            ul.appendChild(li).innerText = x.strDrink
+            ul.appendChild(li).innerText = x.strDrink //How do I add the link?
         })
+
+/******************************************************************************************************************************** */
         document.querySelector("img").src = data.drinks[0].strDrinkThumb
         document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
+
+
+
 /****************** THE STUFF BELOW IS TRYING TO GET ALL THE INGREDIENTS FROM THE API ARRAY TO PUT THEM IN ORDER********************** */   
         // data.drinks[0].forEach((x,i) => {
         //     if(includes('strIngredient')){
