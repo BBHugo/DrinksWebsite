@@ -2,7 +2,6 @@ html {
     text-align: center;
     background: beige;
     color: black;
-
 }
 
 body {
@@ -16,9 +15,9 @@ header{
     width: 100%; /*Doesn't do anything */
     /* justify-content: space-around; */
     position: fixed;
-    height: 30px;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 1030;
+    /* justify-content: center; */ /*This one overwrites the space-between in the cascade*/
 
 }
 
@@ -30,6 +29,8 @@ header{
 
 nav {
     border: 1px solid;
+    width: 80%;
+    right: 0;
 }
 
 .navList {
