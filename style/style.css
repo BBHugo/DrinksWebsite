@@ -18,7 +18,8 @@ header{
     justify-content: space-between;
     z-index: 1030;
     /* justify-content: center; */ /*This one overwrites the space-between in the cascade*/
-
+    height: 40px;
+    top: 0;
 }
 
 .hugoRekt {
@@ -31,6 +32,7 @@ nav {
     border: 1px solid;
     width: 80%;
     right: 0;
+        /*A note, not sure why we were struggling on the purple section in inspect, but literally had to put the nav to a widht %*/
 }
 
 .navList {
@@ -39,6 +41,12 @@ nav {
     width: 100%;
     padding: 0;
     justify-content: space-between;
+    margin: auto;
+    height: 100%; /*centers vertically by making 100% within its parent container */
+}
+
+h1 {
+    margin-top: 50px;
 }
 
 h2 {
@@ -64,10 +72,11 @@ button {
 }
 
 img {
-    length: 150px;
-    width: 150px;
+    length: 600px;
+    width: 600px;
 }
 
 li {
     margin: auto;
+    list-style: none;
 }
