@@ -26,6 +26,7 @@ header{
     justify-self: first baseline;
     margin-left: 0;
     margin: auto;
+    text-wrap: wrap;
 }
 
 nav {
@@ -34,7 +35,7 @@ nav {
     right: 0;
         /*A note, not sure why we were struggling on the purple section in inspect, but literally had to put the nav to a widht %*/
 }
-
+ 
 .navList {
     display: flex;
     border: 1px solid green;
