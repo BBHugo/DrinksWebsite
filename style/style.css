@@ -1,5 +1,12 @@
-* {
+html {
     text-align: center;
+    background: beige;
+    color: black;
+
+}
+
+body {
+    margin: 0;
 }
 
 header{
@@ -9,12 +16,28 @@ header{
     width: 100%; /*Doesn't do anything */
     /* justify-content: space-around; */
     position: fixed;
+    height: 30px;
+    justify-content: space-around;
+    z-index: 1030;
+
 }
 
 .hugoRekt {
     justify-self: first baseline;
     margin-left: 0;
-    margin-right: 20%;
+    margin: auto;
+}
+
+nav {
+    border: 1px solid;
+}
+
+.navList {
+    display: flex;
+    border: 1px solid green;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
 }
 
 h2 {
@@ -42,4 +65,8 @@ button {
 img {
     length: 150px;
     width: 150px;
+}
+
+li {
+    margin: auto;
 }
