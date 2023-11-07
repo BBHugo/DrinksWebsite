@@ -9,7 +9,8 @@ body {
 }
 
 header{
-    border: 1px solid red;
+    background: whitesmoke;
+    /* border: 1px solid red; */
     display: flex;
     margin: 0; /*Doesn't do anything */
     width: 100%; /*Doesn't do anything */
@@ -30,7 +31,7 @@ header{
 }
 
 nav {
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 80%;
     right: 0;
         /*A note, not sure why we were struggling on the purple section in inspect, but literally had to put the nav to a widht %*/
@@ -38,12 +39,18 @@ nav {
  
 .navList {
     display: flex;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 100%;
     padding: 0;
     justify-content: space-between;
     margin: auto;
     height: 100%; /*centers vertically by making 100% within its parent container */
+}
+
+.container1, .container2 {
+    width: 100%;
+    height: 100%;
+    margin: 30px 0;
 }
 
 h1 {
@@ -55,7 +62,7 @@ h2 {
 }
 
 input {
-    width: 50%;
+    width: 20%;
     height: 20px;
     font-size: 20px;
     margin-top: 100px;
@@ -80,4 +87,12 @@ img {
 li {
     margin: auto;
     list-style: none;
+}
+
+footer {
+    background: whitesmoke;
+}
+
+.footerNav {
+    width: 100%;
 }
