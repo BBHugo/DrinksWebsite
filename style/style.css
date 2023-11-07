@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    /* margin: 0; */
+    margin: 0;
     width: 100%;
     /* align-items: center; */
 }
@@ -26,7 +26,7 @@ header{
 }
 
 .hugoRekt {
-    justify-self: first baseline;
+    /* justify-self: first baseline; */
     margin-left: 0;
     /* margin: auto; */
     /* text-wrap: wrap; */
@@ -45,7 +45,7 @@ nav {
     width: 100%;
     padding: 0;
     justify-content: space-between;
-    margin: auto;
+    margin: 0;
     height: 100%; /*centers vertically by making 100% within its parent container*/
 }
 
@@ -62,10 +62,10 @@ nav {
 }
 
 .quad {
-    width: 49.5%;
+    width: 50%;
     background: orange;
-    height: 50px;
-    border: 1px solid pink;
+    height: 300px;
+    margin: 0;
 }
 
 h1 {
@@ -88,10 +88,11 @@ ul{
     display: flex;
     justify-content: space-around;
     list-style: none;
+    /* align-items: stretch; */
 }
 
 button {
-
+    height: 50%;
 }
 
 img {
@@ -100,8 +101,13 @@ img {
 }
 
 li {
-    margin: auto;
+    /* margin: auto; */
     list-style: none;
+    height: 100%;
+    width: 20%; /*Had to hard fix it since the li's didn't want to fill up the nav bar*/
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin: auto; */
 }
 
 footer {
@@ -115,4 +121,20 @@ footer {
 a {
     text-decoration: none; /*To remove the link blue & underline */
     color: orange;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    /* text-align: center; */
+    align-items: center; /*vertically aligns the items within the 100% height <a>*/
+    justify-content: center; /*aligns text horizontally after making the <a> a flex container*/
+}
+
+li:hover {
+    background: darkorange;
+    font-weight: 300;
+}
+
+a:hover {
+    color: black;
 }
