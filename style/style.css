@@ -63,7 +63,6 @@ nav {
 
 .quad {
     width: 50%;
-    background: orange;
     height: 300px;
     margin: 0;
 }
@@ -96,7 +95,7 @@ button {
 }
 
 img {
-    length: 600px;
+    height: 300px;
     width: 75%;
 }
 
@@ -116,6 +115,10 @@ footer {
 
 .footerNav {
     width: 100%;
+}
+
+.drinkImg {
+    margin-top: 50px;
 }
 
 a, .lightDark{

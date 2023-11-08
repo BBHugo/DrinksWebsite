@@ -43,7 +43,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 //Then we have to use the `ticks` to make it a dynamic search through the input bar and button.
 //Lastly it'd be better if we use the arrays given to us from the JSON to make a list we could click on.
 
-document.querySelector("button").addEventListener("click", getDrink)
+document.querySelector(".getCocktail").addEventListener("click", getDrink)
 
 
 function getDrink(){
@@ -54,16 +54,16 @@ function getDrink(){
     .then(data => {
         console.log(data)
 
-/*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
+        /*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
         data.drinks.forEach((x,i) =>{
             let a = document.createElement('a')
-            let ul = document.querySelector('ul')
+            let ul = document.querySelector('.drinkList')
             let li = document.createElement('li')
             ul.appendChild(li).innerText = x.strDrink //How do I add the link?
         })
 
-/******************************************************************************************************************************** */
-        document.querySelector("img").src = data.drinks[0].strDrinkThumb
+        /******************************************************************************************************************************** */
+        document.querySelector(".drinkImg").src = data.drinks[0].strDrinkThumb
         document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
 
 
