@@ -118,7 +118,7 @@ footer {
     width: 100%;
 }
 
-a {
+a, .lightDark{
     text-decoration: none; /*To remove the link blue & underline */
     color: orange;
     height: 100%;
@@ -130,11 +130,21 @@ a {
     justify-content: center; /*aligns text horizontally after making the <a> a flex container*/
 }
 
+.lightDark {
+    background: none;
+    border: none;
+}
+
 li:hover {
     background: darkorange;
     font-weight: 300;
 }
 
 a:hover {
+    color: black;
+    align-items: last baseline;
+}
+
+.lightDark:hover {
     color: black;
 }
