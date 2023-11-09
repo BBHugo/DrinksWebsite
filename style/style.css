@@ -7,7 +7,22 @@ html {
 body {
     margin: 0;
     width: 100%;
+    height: 100vh;
     /* align-items: center; */
+    display: flex;
+}
+
+aside {
+    width: 50%;
+    length: 100%;
+    position: fixed;
+    border: 1px solid red;
+    background: blue;
+}
+
+.overall {
+    width: 50%;
+    margin-left: 50%;
 }
 
 header{
@@ -53,6 +68,25 @@ nav {
     width: 100%;
     /* height: 100%; */
     margin: 30px 0;
+    margin: 0;
+}
+
+.Container1 {
+    display: flex;
+    margin-top: 50px;
+    height: 600px;
+}
+
+.left {
+    width: 60%;
+    height: 300px;
+    margin: 0;
+}
+
+.right {
+    width: 40%;
+    height: 300px;
+    margin: 0
 }
 
 .quadContainer {
@@ -68,7 +102,7 @@ nav {
 }
 
 h1 {
-    margin-top: 50px;
+
 }
 
 h2 {
@@ -139,7 +173,7 @@ a, .lightDark{
 }
 
 li:hover {
-    background: darkorange;
+    background: linear-gradient(whitesmoke,orange);
     font-weight: 300;
 }
 
