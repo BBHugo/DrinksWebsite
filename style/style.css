@@ -21,8 +21,8 @@ aside {
     background: blue;
     border-radius: 20px;
     margin: 10px 0 10px 10px;
-    font-size: 2rem;
-    overflow: hidden;
+    font-size: 1.5rem;
+    overflow: hidden; /*Makes it so that this doesn't scroll when the .overall does*/
     /* position: absolute; */
 }
 
@@ -33,9 +33,28 @@ aside {
     background: whitesmoke;
     border-radius: 20px;
     margin: 10px;
-    overflow: auto;
-    height: 100vh;
+    overflow: auto; /*Allows for the scrolling of this element only without affecting the rest*/
+    height: 100vh; /*Setting the height to 100vh will allow the scroll from the overflow:auto to work*/
 }
+
+.overall::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  .overall::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+   
+  .overall::-webkit-scrollbar-thumb {
+    background: #666; 
+  }
+
+
+  .overall::-webkit-scrollbar-button:end:increment {
+    height: 5%;
+    display: block;
+    background: transparent; /*We need a way to place the scroll bar in the center vertically*/
+  }
 
 header{
     background: whitesmoke;
@@ -91,7 +110,7 @@ nav {
 }
 
 .left {
-    width: 60%;
+    width: 100%;
     height: 300px;
     margin: 0;
 }
@@ -115,7 +134,7 @@ nav {
 }
 
 h1 {
-
+    width: 100%;
 }
 
 h2 {
@@ -149,7 +168,7 @@ img {
 li {
     /* margin: auto; */
     list-style: none;
-    height: 100%;
+    height: 60px;
     width: 100%; /*Had to hard fix it since the li's didn't want to fill up the nav bar*/
     /* display: flex; */
     /* justify-content: center; */
@@ -192,7 +211,7 @@ li:hover {
 
 a:hover {
     color: black;
-    align-items: last baseline;
+    align-items: flex-start;
 }
 
 .lightDark:hover {
