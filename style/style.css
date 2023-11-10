@@ -41,12 +41,15 @@ aside {
     width: 5px;
   }
    
-  .overall::-webkit-scrollbar-track {
+  .overall::-webkit-scrollbar-track { /*is the entire scroll column*/
     background: #ddd;
+    margin-block: 2.5em; /*moves the entire scroll column around*/
+    border-radius: 100vw;
   }
    
-  .overall::-webkit-scrollbar-thumb {
+  .overall::-webkit-scrollbar-thumb { /*controls the little bar that goes up and down*/
     background: #666; 
+    border-radius: 100vw;
   }
 
 
