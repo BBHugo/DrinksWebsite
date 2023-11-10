@@ -10,7 +10,7 @@ body {
     /* height: 100vh; */
     /* align-items: center; */
     display: flex;
-    background: orange;
+    background: black;
 }
 
 aside {
@@ -30,7 +30,7 @@ aside {
     width: 75%;
     /* margin-left: 50%; */
     /* justify-self: stretch; */
-    background: whitesmoke;
+    background: linear-gradient(purple,gray,black);
     border-radius: 20px;
     margin: 10px;
     overflow: auto; /*Allows for the scrolling of this element only without affecting the rest*/
@@ -206,7 +206,7 @@ a, .lightDark{
     background: none;
     border: none;
 }
-
+ 
 li:hover {
     background: linear-gradient(whitesmoke,orange);
     font-weight: 300;
