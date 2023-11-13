@@ -22,13 +22,12 @@ aside {
     font-size: 1.5rem;
     overflow: hidden; /*Makes it so that this doesn't scroll when the .overall does*/
     /* position: absolute; */
-}
+}    
 
 .overall {
     width: 75%;
     /* margin-left: 50%; */
     /* justify-self: stretch; */
-    background: linear-gradient(purple,gray,black);
     border-radius: 20px;
     margin: 10px;
     overflow: auto; /*Allows for the scrolling of this element only without affecting the rest*/
@@ -72,9 +71,9 @@ header{
     top: 0;
 }
 
-.iconName {
+.iconName, .lightDarkContainer {
     display: flex;
-    border-radius: 25px;
+    border-radius: 20px;
     height: 40px;
     margin: 10px 0;
     background: rgb(54, 53, 53);
@@ -112,9 +111,15 @@ nav {
     justify-content: space-between;
     margin: 0;
     height: 100%; /*centers vertically by making 100% within its parent container*/
-    border-radius: 30px;
+    border-radius: 20px;
     background: rgb(54, 53, 53);
     font-size: .6em;
+}
+
+.lightDarkLi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container1, .container2 {
@@ -125,6 +130,7 @@ nav {
 }
 
 .Container1 {
+    background: linear-gradient(purple,gray);
     display: flex;
     margin-top: 10px;
     height: 600px;
@@ -140,6 +146,10 @@ nav {
     width: 40%;
     height: 300px;
     margin: 0
+}
+
+.quadAnd2 {
+    background: linear-gradient(gray,black)
 }
 
 .quadContainer {
@@ -210,7 +220,7 @@ footer {
 
 a, .lightDark{
     text-decoration: none; /*To remove the link blue & underline */
-    color: orange;
+    color: whitesmoke;
     height: 100%;
     width: 100%;
     margin: auto;
@@ -228,7 +238,7 @@ a, .lightDark{
 li:hover {
     background: linear-gradient(gray, rgb(49, 48, 48));
     font-weight: 300;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 a:hover {
