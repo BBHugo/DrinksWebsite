@@ -17,8 +17,6 @@ aside {
     width: 25%;
     /* height: 100vh; */
     /* position: absolute; */
-    border: 1px solid red;
-    background: blue;
     border-radius: 20px;
     margin: 10px 0 10px 10px;
     font-size: 1.5rem;
@@ -74,15 +72,25 @@ header{
     top: 0;
 }
 
+.iconName {
+    display: flex;
+    border-radius: 25px;
+    height: 40px;
+    margin: 10px 0;
+    background: rgb(54, 53, 53);
+    justify-content: center;
+    align-items: center;
+}
+
 .hugoRekt {
     /* justify-self: first baseline; */
     margin-left: 0;
-    border: 1px solid orange;
-    border-radius: 30px;
     height: 30px;
-    text-align: center;
     margin: auto;
-    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* margin: auto; */
     /* text-wrap: wrap; */
 }
@@ -95,6 +103,7 @@ nav {
 }
  
 .navList {
+    
     display: flex;
     flex-direction: column;
     /* border: 1px solid green; */
@@ -103,8 +112,9 @@ nav {
     justify-content: space-between;
     margin: 0;
     height: 100%; /*centers vertically by making 100% within its parent container*/
-    border: 1px solid orange;
     border-radius: 30px;
+    background: rgb(54, 53, 53);
+    font-size: .6em;
 }
 
 .container1, .container2 {
@@ -116,7 +126,7 @@ nav {
 
 .Container1 {
     display: flex;
-    margin-top: 50px;
+    margin-top: 10px;
     height: 600px;
 }
 
@@ -216,13 +226,13 @@ a, .lightDark{
 }
  
 li:hover {
-    background: linear-gradient(whitesmoke,orange);
+    background: linear-gradient(gray, rgb(49, 48, 48));
     font-weight: 300;
+    border-radius: 30px;
 }
 
 a:hover {
     color: black;
-    align-items: flex-start;
 }
 
 .lightDark:hover {
