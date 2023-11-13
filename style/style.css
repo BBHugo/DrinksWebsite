@@ -77,6 +77,12 @@ header{
 .hugoRekt {
     /* justify-self: first baseline; */
     margin-left: 0;
+    border: 1px solid orange;
+    border-radius: 30px;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+    
     /* margin: auto; */
     /* text-wrap: wrap; */
 }
@@ -97,6 +103,8 @@ nav {
     justify-content: space-between;
     margin: 0;
     height: 100%; /*centers vertically by making 100% within its parent container*/
+    border: 1px solid orange;
+    border-radius: 30px;
 }
 
 .container1, .container2 {
