@@ -2,6 +2,7 @@ html {
     text-align: center;
     background: beige;
     color: black;
+    /* height: 100vh; */
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     /* align-items: center; */
     display: flex;
     background: black;
+    height: 100vh;
 }
 
 aside {
@@ -31,7 +33,7 @@ aside {
     border-radius: 20px;
     margin: 10px;
     overflow: auto; /*Allows for the scrolling of this element only without affecting the rest*/
-    height: 100vh; /*Setting the height to 100vh will allow the scroll from the overflow:auto to work*/
+    height: 97vh; /*Setting the height to 100vh will allow the scroll from the overflow:auto to work*/
 }
 
 .overall::-webkit-scrollbar {
@@ -130,7 +132,7 @@ nav {
 }
 
 .Container1 {
-    background: linear-gradient(purple,gray);
+    background: linear-gradient(whitesmoke,gray);
     display: flex;
     margin-top: 10px;
     height: 600px;
