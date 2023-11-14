@@ -22,7 +22,7 @@ aside {
     border-radius: 20px;
     margin: 10px 0 10px 10px;
     font-size: 1.5rem;
-    overflow: hidden; /*Makes it so that this doesn't scroll when the .overall does*/
+    overflow: auto; /* overflow: hidden makes it so that this doesn't scroll when the .overall does, but since we have a set height for eveyrhting else, it wont scroll since we can fit everything, so we put it to auto in case they shorten the height of the page*/
     /* position: absolute; */
 }    
 
@@ -112,7 +112,7 @@ nav {
     padding: 0;
     justify-content: space-between;
     margin: 0;
-    height: 100%; /*centers vertically by making 100% within its parent container*/
+    /* height: 100%; centers vertically by making 100% within its parent container */
     border-radius: 20px;
     background: rgb(26, 25, 25);
     font-size: .6em;
@@ -159,12 +159,16 @@ nav {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .quad {
     width: 50%;
     height: 300px;
     margin: 0;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
 }
 
 h1 {
@@ -174,6 +178,8 @@ h1 {
 
 h2 {
     font-size: 1rem;
+    /* border-top: 1px dotted black;
+    border-bottom: 1px dotted black; */
 }
 
 input {
@@ -196,14 +202,14 @@ button {
 }
 
 img {
-    height: 300px;
+    height: auto;
     width: 75%;
 }
 
 li {
     /* margin: auto; */
     list-style: none;
-    height: 60px;
+    height: 55px;
     width: 100%; /*Had to hard fix it since the li's didn't want to fill up the nav bar*/
     /* display: flex; */
     /* justify-content: center; */
