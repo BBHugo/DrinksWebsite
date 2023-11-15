@@ -59,7 +59,11 @@ function getDrink(){
             let a = document.createElement('a')
             let ul = document.querySelector('.drinkList')
             let li = document.createElement('li')
-            ul.appendChild(li).innerText = x.strDrink //How do I add the link?
+            a.setAttribute('href', x.strDrinkThumb)
+            li.innerText = x.strDrink
+            // ul.appendChild(li).innerText = x.strDrink //How do I add the link?
+            li.appendChild(a)
+            ul.appendChild(li)
         })
 
         /******************************************************************************************************************************** */
