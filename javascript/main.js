@@ -45,6 +45,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 
 document.querySelector(".getCocktail").addEventListener("click", getDrink)
 
+document.querySelector("h1").addEventListener("click", showLi)
 
 function getDrink(){
     const drinkInput = document.querySelector("input").value
@@ -59,11 +60,17 @@ function getDrink(){
             let a = document.createElement('a')
             let ul = document.querySelector('.drinkList')
             let li = document.createElement('li')
+            let el = document.createElement('p')
             a.setAttribute('href', x.strDrinkThumb )
+            a.setAttribute('class','hideAndSeek')
             li.innerText = x.strDrink
+            li.setAttribute('class','createdLi')
+            el.setAttribute('class','hideAndSeek')
             // ul.appendChild(li).innerText = x.strDrink //How do I add the link?
             li.appendChild(a)
+            li.appendChild(el)
             ul.appendChild(li)
+
         })
 
         /******************************************************************************************************************************** */
@@ -88,6 +95,24 @@ function getDrink(){
 
 
 }
+
+
+function showLi(){
+    let el = document.querySelector('.hideAndSeek')
+
+    if(el.style.display === 'none') {
+        el.style.display = 'block'
+    }else {
+        el.style.display = 'none'
+    }
+}
+/*What we have to do is make it so whenever we click on one of the created li's it displays all the information we need it to (Instructions etc)
+Whenever we click on the li again, it'll have to hide all that information.
+What we can do is have all the information already ready whenever the search is made, but hide all the information by default. As soon as that specific li is clicked, we unhide it.
+document.getElementbyID("element").style.display = "none" will hide our element
+document.getelementbyID("element").style.display = "block" will stop the display: none from working, thus displaying it.
+We have to add another element underneath the created list items
+
 
 /**************************************************************************************************************************************** */ 
 /*****************************************************LIGHT/DARK MODE************************************************************************* */

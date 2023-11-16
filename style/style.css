@@ -275,3 +275,16 @@ a:hover {
 .lightDark:hover {
     color: black;
 }
+
+
+/*JAVASCRIPT STUFF*/
+
+.hideAndSeek {
+    display: none;
+}
+
+.createdLi {
+    /* display: flex; */
+    width: 100%;
+    height: auto;
+}
