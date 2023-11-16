@@ -45,7 +45,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 
 document.querySelector(".getCocktail").addEventListener("click", getDrink)
 
-document.querySelector("h1").addEventListener("click", showLi)
+document.querySelector(".lightDarkLi").addEventListener("click", showLi)
 
 function getDrink(){
     const drinkInput = document.querySelector("input").value
@@ -57,17 +57,18 @@ function getDrink(){
 
         /*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
         data.drinks.forEach((x,i) =>{
-            let a = document.createElement('a')
+            let img = document.createElement('img')
             let ul = document.querySelector('.drinkList')
             let li = document.createElement('li')
             let el = document.createElement('p')
-            a.setAttribute('href', x.strDrinkThumb )
-            a.setAttribute('class','hideAndSeek')
+            img.setAttribute('src', x.strDrinkThumb )
+            img.setAttribute('class','hideAndSeek')
+            img.style.height = 'auto'
             li.innerText = x.strDrink
             li.setAttribute('class','createdLi')
             el.setAttribute('class','hideAndSeek')
             // ul.appendChild(li).innerText = x.strDrink //How do I add the link?
-            li.appendChild(a)
+            li.appendChild(img)
             li.appendChild(el)
             ul.appendChild(li)
 
@@ -98,8 +99,9 @@ function getDrink(){
 
 
 function showLi(){
-    let el = document.querySelector('.hideAndSeek')
+    console.log('Test')
 
+    let el = document.querySelector('.hideAndSeek')
     if(el.style.display === 'none') {
         el.style.display = 'block'
     }else {
