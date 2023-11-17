@@ -3,6 +3,7 @@ html {
     background: beige;
     color: black;
     /* height: 100vh; */
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 body {
@@ -58,6 +59,32 @@ aside {
     display: block;
     background: transparent; /*We need a way to place the scroll bar in the center vertically*/
   }
+
+  /*****************************************************/
+
+  aside::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+  }
+   
+  aside::-webkit-scrollbar-track { /*is the entire scroll column*/
+    background: #ddd;
+    margin-block: 8em; /*moves the entire scroll column around*/
+    border-radius: 100vw;
+  }
+   
+  aside::-webkit-scrollbar-thumb { /*controls the little bar that goes up and down*/
+    background: #666; 
+    border-radius: 100vw;
+  }
+
+
+  aside::-webkit-scrollbar-button:end:increment {
+    height: 5%;
+    display: block;
+    background: transparent; /*We need a way to place the scroll bar in the center vertically*/
+  }
+
 
 header{
     background: whitesmoke;
@@ -119,10 +146,15 @@ nav {
     font-size: .6em;
 }
 
+.navList li {
+    height: 40px;
+}
+
 .lightDarkLi {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .container1, .container2 {
@@ -179,8 +211,8 @@ nav {
     width: 50%;
     height: 300px;
     margin: 0;
-    border-top: 1px dashed black;
-    border-bottom: 1px dashed black;
+    /* border-top: 1px dashed black;
+    border-bottom: 1px dashed black; */
 }
 
 h1 {
@@ -192,6 +224,7 @@ h2 {
     font-size: 1rem;
     /* border-top: 1px dotted black;
     border-bottom: 1px dotted black; */
+    text-decoration: underline;
 }
 
 input {
@@ -207,6 +240,7 @@ ul{
     justify-content: space-around;
     list-style: none;
     /* align-items: stretch; */
+    padding: 0;
 }
 
 .inputContainer {

@@ -45,7 +45,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 
 document.querySelector(".getCocktail").addEventListener("click", getDrink)
 
-document.querySelector(".lightDarkLi").addEventListener("click", showLi)
+document.querySelectorAll(".createdLi").addEventListener("click", showLi)
 
 function getDrink(){
     let div = document.querySelector('.drinkList')
@@ -66,7 +66,7 @@ function getDrink(){
         console.log(data)
         // let array = []
         /*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
-        data.drinks.forEach((x,i) =>{
+        data.drinks.forEach((x) =>{
             let img = document.createElement('img')
             let li = document.createElement('li')
             let el = document.createElement('p')
@@ -77,20 +77,10 @@ function getDrink(){
             li.setAttribute('class','createdLi')
             el.setAttribute('class','hideAndSeek')
             ul.setAttribute('class','createdUl')
-            // ul.appendChild(li).innerText = x.strDrink //How do I add the link?
             li.appendChild(img)
             li.appendChild(el)
             ul.appendChild(li)
             div.appendChild(ul)
-
-            // if(i%3 === 0){ /*This will be the name which will go into the li*/
-            //     array += x.strDrink
-            // }else if(i%2 === 0){ /*This will be the instructions*/
-            //     array += x.strInstructions
-            // }else { /*This will contain the picture*/
-            //     array += x.strDrinkThumb
-            // }
-            // console.log(array)
         })
 
     
