@@ -3,7 +3,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
     .then(data => {
         // console.log(data)
         // console.log(data.drinks)
-        console.log(data.drinks[0])
+        console.log(data)
     })
     .catch(err => {
         alert(`error ${err}`)
@@ -48,17 +48,26 @@ document.querySelector(".getCocktail").addEventListener("click", getDrink)
 document.querySelector(".lightDarkLi").addEventListener("click", showLi)
 
 function getDrink(){
-    const drinkInput = document.querySelector("input").value
+    let div = document.querySelector('.drinkList')
 
+    if(document.querySelector('.createdUl')){
+        document.querySelector('.createdUl').remove()
+    }
+
+    let ul = document.createElement('ul')
+
+    // const element = document.querySelector('.createdLi')
+    // element.remove()
+    const drinkInput = document.querySelector("input").value
+    /*ADD AN OPTION THAT REMOVES ANY PREVIOUS LI's*/
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkInput}`)
     .then(res => res.json())
     .then(data => {
         console.log(data)
-
+        // let array = []
         /*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
         data.drinks.forEach((x,i) =>{
             let img = document.createElement('img')
-            let ul = document.querySelector('.drinkList')
             let li = document.createElement('li')
             let el = document.createElement('p')
             img.setAttribute('src', x.strDrinkThumb )
@@ -67,12 +76,24 @@ function getDrink(){
             li.innerText = x.strDrink
             li.setAttribute('class','createdLi')
             el.setAttribute('class','hideAndSeek')
+            ul.setAttribute('class','createdUl')
             // ul.appendChild(li).innerText = x.strDrink //How do I add the link?
             li.appendChild(img)
             li.appendChild(el)
             ul.appendChild(li)
+            div.appendChild(ul)
 
+            // if(i%3 === 0){ /*This will be the name which will go into the li*/
+            //     array += x.strDrink
+            // }else if(i%2 === 0){ /*This will be the instructions*/
+            //     array += x.strInstructions
+            // }else { /*This will contain the picture*/
+            //     array += x.strDrinkThumb
+            // }
+            // console.log(array)
         })
+
+    
 
         /******************************************************************************************************************************** */
         document.querySelector(".drinkImg").src = data.drinks[0].strDrinkThumb
@@ -99,7 +120,7 @@ function getDrink(){
 
 
 function showLi(){
-    console.log('Test')
+    // console.log('Test')
 
     let el = document.querySelector('.hideAndSeek')
     if(el.style.display === 'none') {
