@@ -196,7 +196,8 @@ nav {
 }
 
 .quadAnd2 {
-    background: linear-gradient(gray,black)
+    background: linear-gradient(gray,black);
+    background-color: black;
 }
 
 .quadContainer {

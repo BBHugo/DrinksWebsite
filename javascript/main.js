@@ -45,8 +45,6 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 
 document.querySelector(".getCocktail").addEventListener("click", getDrink)
 
-document.querySelectorAll(".createdLi").addEventListener("click", showLi)
-
 function getDrink(){
     let div = document.querySelector('.drinkList')
 
@@ -66,7 +64,7 @@ function getDrink(){
         console.log(data)
         // let array = []
         /*****************THE STUFF BELOW CREATES A NEW li FOR EVERY ELEMENT IN THE JSON AND ADDS THE NAME OF THE DRINK**************** */
-        data.drinks.forEach((x) =>{
+        data.drinks.forEach((x,i) =>{
             let img = document.createElement('img')
             let li = document.createElement('li')
             let el = document.createElement('p')
@@ -74,13 +72,14 @@ function getDrink(){
             img.setAttribute('class','hideAndSeek')
             img.style.height = 'auto'
             li.innerText = x.strDrink
-            li.setAttribute('class','createdLi')
+            li.setAttribute('class',`createdLi createdLi${i}`)
             el.setAttribute('class','hideAndSeek')
             ul.setAttribute('class','createdUl')
             li.appendChild(img)
             li.appendChild(el)
             ul.appendChild(li)
             div.appendChild(ul)
+            document.querySelector(`.createdLi${i}`).addEventListener('click',showLi)
         })
 
     
@@ -108,6 +107,13 @@ function getDrink(){
 
 }
 
+
+// let selector = document.querySelectorAll(".createdLi")
+
+// selector.forEach((x,i) => {
+//     x.addEventListener("click", showLi)
+
+// })
 
 function showLi(){
     // console.log('Test')
