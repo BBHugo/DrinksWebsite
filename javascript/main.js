@@ -85,8 +85,8 @@ function getDrink(){
     
 
         /******************************************************************************************************************************** */
-        document.querySelector(".drinkImg").src = data.drinks[0].strDrinkThumb
-        document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
+        // document.querySelector(".drinkImg").src = data.drinks[0].strDrinkThumb
+        // document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
 
 
 
