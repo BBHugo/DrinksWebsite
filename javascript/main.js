@@ -67,16 +67,16 @@ function getDrink(){
         data.drinks.forEach((x,i) =>{
             let img = document.createElement('img')
             let li = document.createElement('li')
-            let el = document.createElement('p')
+            let p = document.createElement('p')
             img.setAttribute('src', x.strDrinkThumb )
-            img.setAttribute('class','hideAndSeek')
+            img.setAttribute('class',`hideAndSeek img${i}`)
             img.style.height = 'auto'
             li.innerText = x.strDrink
-            li.setAttribute('class',`createdLi createdLi${i}`)
-            el.setAttribute('class','hideAndSeek')
+            li.setAttribute('class',`createdLi createdLi${i} ${i}`)
+            p.setAttribute('class',`hideAndSeek p${i}` )
             ul.setAttribute('class','createdUl')
             li.appendChild(img)
-            li.appendChild(el)
+            li.appendChild(p)
             ul.appendChild(li)
             div.appendChild(ul)
             document.querySelector(`.createdLi${i}`).addEventListener('click',showLi)
@@ -103,7 +103,7 @@ function getDrink(){
     .catch(err => {
         alert(`error ${err}`)
     })
-
+    document.querySelector('input').value = ''
 
 }
 
@@ -115,14 +115,21 @@ function getDrink(){
 
 // })
 
-function showLi(){
+function showLi(e){
+    let number = e.target.classList[e.target.classList.length - 1]
+    console.log(e.target.classList)
+    console.log(e.target.classList[e.target.classList.length - 1])
+    console.log(document.querySelector(`.p${number}`))
     // console.log('Test')
-
-    let el = document.querySelector('.hideAndSeek')
-    if(el.style.display === 'none') {
-        el.style.display = 'block'
+    /*use a conditional to go through the different li's*/
+    let p = document.querySelector(`.p${number}`)
+    let img = document.querySelector(`.img${number}`)
+    if(p.style.display === 'none') {
+        p.style.display = 'block'
+        img.style.display = 'block'
     }else {
-        el.style.display = 'none'
+        p.style.display = 'none'
+        img.style.display = 'none'
     }
 }
 /*What we have to do is make it so whenever we click on one of the created li's it displays all the information we need it to (Instructions etc)
