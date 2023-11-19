@@ -71,17 +71,18 @@ function getDrink(){
             p.innerText = x.strInstructions
             img.setAttribute('src', x.strDrinkThumb )
             img.setAttribute('class',`hideAndSeek img${i}`)
-            // p.setAttribute('class')
             img.style.height = 'auto'
             li.innerText = x.strDrink
             li.setAttribute('class',`createdLi createdLi${i} ${i}`)
-            p.setAttribute('class',`hideAndSeek p${i}` )
+            p.setAttribute('class',`hideAndSeek p${i}`)
+            // p.style.display = 'none'
             ul.setAttribute('class','createdUl')
             li.appendChild(img)
             li.appendChild(p)
             ul.appendChild(li)
             div.appendChild(ul)
             document.querySelector(`.createdLi${i}`).addEventListener('click',showLi)
+            document.querySelector(`.p${i}`).addEventListener('click',showLi)
         })
 
     
@@ -121,7 +122,7 @@ function showLi(e){
     let number = e.target.classList[e.target.classList.length - 1]
     console.log(e.target.classList)
     console.log(e.target.classList[e.target.classList.length - 1])
-    console.log(document.querySelector(`.p${number}`))
+    console.log(document.querySelector(`.p${number}`).toString())
     // console.log('Test')
     /*use a conditional to go through the different li's*/
     let p = document.querySelector(`.p${number}`)

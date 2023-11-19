@@ -347,6 +347,13 @@ a:hover {
     width: 100%;
 }
 
+p { /*This box sets it so that any element above the created Li's will not be clickable but still viewable trick gotten from https://stackoverflow.com/questions/1401658/html-overlay-which-allows-clicks-to-fall-through-to-elements-behind-it */
+    height:0px;
+    overflow:visible;
+    pointer-events:none;
+    background:none !important
+}
+
 .createdLi {
     /* display: flex; */
     width: 100%;
