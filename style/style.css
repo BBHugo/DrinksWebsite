@@ -288,6 +288,7 @@ li {
     /* margin: auto; */
 }
 
+
 /* footer {
     background: whitesmoke;
 }
@@ -350,4 +351,5 @@ a:hover {
     /* display: flex; */
     width: 100%;
     height: auto;
+    display: flex;
 }

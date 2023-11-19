@@ -68,8 +68,10 @@ function getDrink(){
             let img = document.createElement('img')
             let li = document.createElement('li')
             let p = document.createElement('p')
+            p.innerText = x.strInstructions
             img.setAttribute('src', x.strDrinkThumb )
             img.setAttribute('class',`hideAndSeek img${i}`)
+            // p.setAttribute('class')
             img.style.height = 'auto'
             li.innerText = x.strDrink
             li.setAttribute('class',`createdLi createdLi${i} ${i}`)
@@ -124,6 +126,7 @@ function showLi(e){
     /*use a conditional to go through the different li's*/
     let p = document.querySelector(`.p${number}`)
     let img = document.querySelector(`.img${number}`)
+    const li = document.querySelector(`.createdLi${number}`)
     if(p.style.display === 'none') {
         p.style.display = 'block'
         img.style.display = 'block'
