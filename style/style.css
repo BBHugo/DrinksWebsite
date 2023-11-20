@@ -178,7 +178,7 @@ nav {
 .container2 {
     color: whitesmoke;
     display: flex;
-    margin-top: 90px;
+    /* margin-top: 90px; */
     flex-wrap: wrap
 }
 
@@ -345,9 +345,12 @@ a:hover {
 
 .createdUl {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-p { /*This box sets it so that any element above the created Li's will not be clickable but still viewable trick gotten from https://stackoverflow.com/questions/1401658/html-overlay-which-allows-clicks-to-fall-through-to-elements-behind-it */
+.ghost { /*This box sets it so that any element above the created Li's will not be clickable but still viewable trick gotten from https://stackoverflow.com/questions/1401658/html-overlay-which-allows-clicks-to-fall-through-to-elements-behind-it */
     height:0px;
     overflow:visible;
     pointer-events:none;
@@ -359,4 +362,7 @@ p { /*This box sets it so that any element above the created Li's will not be cl
     width: 100%;
     height: auto;
     display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
 }
