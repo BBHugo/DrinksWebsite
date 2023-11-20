@@ -363,6 +363,15 @@ a:hover {
     height: auto;
     display: flex;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+.createdLi img {
+    height: 10%;
+    width: 10%;
+}
+
+.createdLi p {
+    width: 80%
 }

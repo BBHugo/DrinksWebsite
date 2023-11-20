@@ -118,9 +118,8 @@ function getDrink(){
 
 // })
 
-function showLi(e){
+function showLi(e){ /*What I can understand, the e parameter readys whatever element was clicked and puts it here*/
     let number = e.target.classList[e.target.classList.length - 1]
-
     // console.log(e.target.classList)
     // console.log(e.target.classList[e.target.classList.length - 1])
     // console.log(document.querySelector(`.p${number}`).toString())
@@ -133,9 +132,11 @@ function showLi(e){
     if(p.style.display === 'none') {
         p.style.display = 'block'
         img.style.display = 'block'
+        li.style.background = 'linear-gradient("gray","black")'
     }else {
         p.style.display = 'none'
         img.style.display = 'none'
+        li.style.background = ''
     }
 }
 /*What we have to do is make it so whenever we click on one of the created li's it displays all the information we need it to (Instructions etc)
