@@ -1,13 +1,32 @@
+// let array = []
+
 fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
     .then(res => res.json())
     .then(data => {
         // console.log(data)
         // console.log(data.drinks)
         console.log(data)
-    })
+        console.log(Object.entries(data.drinks[0]).map(([k,v]) => ({[k]:v}))) /*Makes all properties and methods in an object into an array. Information taken from: https://www.bing.com/search?q=How+to+put+all+the+properties+of+an+object+into+an+array&cvid=112e23c0b13044ca9ef2ef464609182b&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQ6wcYQNIBCDkyOTFqMGo0qAIAsAIA&FORM=ANAB01&PC=ASTS*/
+        const array = Object.entries(data.drinks[0]).map(([k,v]) => ({[k]:v}))
+        // array.push(Object.entries(data.drinks[0]).map(([k,v]) => ({[k]:v})) + 'hello') -DONT DO SHIT
+        console.log(array[20]) //should return with strIngredient4: 'Salt'
+
+        }
+    )
+    
     .catch(err => {
         alert(`error ${err}`)
     })
+
+
+    // function filterItems(arr, query) {
+    //     return arr.filter((el) =>
+    //     el.toLowerCase().includes(query.toLowerCase()))
+    // }
+
+    // console.log(array[20])
+    // console.log(filterItems(array, "strIng"))
+
 
 //The code below is supposed to try to split the information given in the chosen array, find the ingredients and list them. But so far idk how to split the information within the API's array.
 

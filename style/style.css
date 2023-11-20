@@ -359,12 +359,14 @@ a:hover {
 
 .createdLi {
     /* display: flex; */
+    font-size: 2em;
     width: 100%;
     height: auto;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .createdLi img {
@@ -373,5 +375,8 @@ a:hover {
 }
 
 .createdLi p {
-    width: 80%
+    width: 80%;
+    min-height: 200px;
+    border-bottom: 1px dashed gray;
+    margin-bottom: 0;
 }
