@@ -225,6 +225,8 @@ nav {
 
 .quad img, .container2 img {
     border-radius: 50px;
+    max-width: 40%;
+    max-height: 40%;
 }
 
 .container2 img {
