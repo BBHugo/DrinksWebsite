@@ -190,9 +190,13 @@ function lightDarkModes() {
         
     //     document.querySelector('.lightDark').innerHTML = 'Dark Mode' //This replaces any text within the Element with whatever I choose. It's the same down in the Dark Mode function
     //     document.querySelector('.fa-rotate-180').className = 'fa-solid fa-circle-half-stroke flipped' //This is broken but it's pickinng it up properly, it just doesn't flip back to the original. I think we need completely unique classes.
-       let HTML = document.querySelector('html')
-       HTML.setAttribute('class','lightDarkHtml')
-       document.querySelector('.lightDarkHTML').style.color = 'blue'
+    //    let HTML = document.querySelector('html')
+    //    HTML.setAttribute('class','lightDarkHtml')
+    //    document.querySelector('.lightDarkHTML').style.color = 'blue'
+            document.querySelector('body').style.background = 'white'
+            document.querySelector('.LDNavList').style.background = 'rgb(172, 169, 169)'
+            document.querySelector('.LDA').style.color = 'gray';
+            document.querySelector('.lightDark').innerText = 'Dark Mode'
      }
 
     else if(document.querySelector('.lightDark').innerText === "Dark Mode") {
@@ -211,7 +215,9 @@ function lightDarkModes() {
         // document.querySelector('.extraRecipes').style.backgroundColor = 'whiteSmoke'
         // document.querySelector('.lightDark').innerHTML = 'Light Mode'
         // document.querySelector('.flipped').className = 'fa-solid fa-circle-half-stroke fa-rotate-180' //I believe the problem is with the "lightMode" conditional, still this is broken but it's picking it up properly, it just doesn't flip back to the original.
-        document.querySelector('.ligthDarkHtml').style.color = ''
+        document.querySelector('body').style.background = 'black'
+        document.querySelector('.LDNavList').background = ''
+        document.querySelector('.lightDark').innerText = 'Light Mode'
     }
 
     else {

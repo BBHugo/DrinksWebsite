@@ -372,13 +372,22 @@ a:hover {
 }
 
 .createdLi img {
-    height: 10%;
-    width: 10%;
+    height: 20%;
+    width: 20%;
 }
+
 
 .createdLi p {
     width: 80%;
     min-height: 200px;
     border-bottom: 1px dashed gray;
     margin-bottom: 0;
+}
+
+.LDNavList {
+
+}
+
+.LDA {
+
 }
