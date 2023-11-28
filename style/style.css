@@ -23,7 +23,7 @@ aside {
     border-radius: 20px;
     margin: 10px 0 10px 10px;
     font-size: 1.5rem;
-    overflow: auto; /* overflow: hidden makes it so that this doesn't scroll when the .overall does, but since we have a set height for eveyrhting else, it wont scroll since we can fit everything, so we put it to auto in case they shorten the height of the page*/
+    overflow: hidden; /* overflow: hidden makes it so that this doesn't scroll when the .overall does, but since we have a set height for eveyrhting else, it wont scroll since we can fit everything, so we put it to auto in case they shorten the height of the page*/
     /********BE SURE TO FIX/EDIT THE SCROLL BAR FOR THIS!!!!*****/
     /* position: absolute; */
     height: 100vh;
@@ -289,6 +289,7 @@ li {
     /* justify-content: center; */
     /* margin: auto; */
     display: flex;
+    justify-content: center;
 }
 
 
