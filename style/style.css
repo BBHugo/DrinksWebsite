@@ -393,3 +393,12 @@ a:hover {
 .LDA {
     background: '';
 }
+
+
+/*Media Queries*/
+
+@media screen and (max-width: 600px){
+    .navList li {
+        display: none;
+    }
+}
