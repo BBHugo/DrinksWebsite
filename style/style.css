@@ -398,7 +398,11 @@ a:hover {
 /*Media Queries*/
 
 @media screen and (max-width: 600px){
-    .navList li {
+    .navList a {
         display: none;
+    }
+
+    aside {
+        max-width: 400px;
     }
 }
