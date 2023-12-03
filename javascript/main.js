@@ -216,7 +216,7 @@ function lightDarkModes() {
         // document.querySelector('.lightDark').innerHTML = 'Light Mode'
         // document.querySelector('.flipped').className = 'fa-solid fa-circle-half-stroke fa-rotate-180' //I believe the problem is with the "lightMode" conditional, still this is broken but it's picking it up properly, it just doesn't flip back to the original.
         document.querySelector('body').style.background = 'black'
-        document.querySelector('.LDNavList').background = ''
+        document.querySelector('.navList').style.background = 'rgb(26,25,25)'
         document.querySelector('.lightDark').innerText = 'Light Mode'
     }
 
