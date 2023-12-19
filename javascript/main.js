@@ -195,7 +195,6 @@ function lightDarkModes() {
     //    document.querySelector('.lightDarkHTML').style.color = 'blue'
             document.querySelector('body').style.background = 'white'
             document.querySelector('.LDNavList').style.background = 'rgb(172, 169, 169)'
-            document.querySelector('li').style.color = 'gray';
             document.querySelector('.lightDark').innerText = 'Dark Mode'
      }
 
